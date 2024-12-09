@@ -1,0 +1,77 @@
+/* Responsividade */
+@media (max-width: 768px) {
+    .menu {
+        position: absolute;
+        top: 60px; /* Ajuste conforme necessário */
+        left: 0;
+        right: 0;
+        display: none; /* Esconde o menu inicialmente */
+    }
+
+    .header-bottom-side-left h2 {
+        font-size: 40px; /* Tamanho da fonte do título em telas menores */
+        margin-top: 40px; /* Ajusta a margem superior */
+    }
+
+    .header-bottom-side-left p {
+        font-size: 16px; /* Tamanho da fonte do parágrafo em telas menores */
+    }
+}
+
+/* Media query para telas menores */
+@media (max-width: 768px) { /* Altere o valor conforme necessário */
+    .cols-3 {
+        grid-template-columns: 1fr; /* 1 coluna em telas pequenas */
+        margin-left: 200px; /* Remove a margem para melhor alinhamento */
+        margin-right: 0;/* Remove a margem para*/
+        width: 100px;
+        text-align: center;
+        justify-content: center;
+        gap:40px;
+        
+    }
+    .cols-8{
+        grid-template-columns:2, 2fr; /* 1 coluna em telas pequenas */
+        margin-left: 0; /* Remove a margem para melhor alinhamento */
+        margin-right: 0;/* Remove a margem para*/
+
+    }
+    
+}
+@media (max-width: 576px) {
+
+
+    .product-name {
+        font-size: 1rem; /* Tamanho da fonte do nome do produto reduzido */
+    }
+
+    .product-price {
+        font-size: 1.2rem; /* Tamanho da fonte do preço reduzido */
+    }
+
+    .rate {
+        font-size: 0.9rem; /* Tamanho da fonte da classificação reduzido */
+    }
+}
+
+@media (max-width: 768px) 
+{
+    .cols-4 {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0px;
+        margin-left: 40px;
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 600px) {
+    .carrossel-text {
+        padding: 10px; /* Reduz o padding em telas menores */
+    }
+
+    .rate {
+        font-size: 1.2em; 
+}
+}
+
+  

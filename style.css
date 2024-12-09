@@ -1,0 +1,507 @@
+/* Estilos globais */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #002c53; /* Cor de fundo da navbar */
+    padding: 15px 20px; /* Espaçamento interno */
+    position: sticky; /* Fixa a navbar no topo */
+    top: 0; /* Fica no topo da página */
+    z-index: 100; /* Garante que a navbar fique acima de outros elementos */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra para profundidade */
+}
+
+.header-inner-content {
+    display: flex; /* Usar flexbox para organizar os itens */
+    justify-content: space-between; /* Espaço entre logo e menu */
+    align-items: center; /* Alinhar verticalmente */
+}
+
+.logo {
+    color: #fff; /* Cor do texto do logo */
+    font-size: 30px; /* Tamanho da fonte do logo */
+}
+
+.logo span {
+    color: #439fd1; /* Cor diferente para parte do logo */
+}
+
+/* Menu */
+.menu {
+    display: none; /* Oculta o menu por padrão */
+    background-color: #002c53; /* Cor de fundo do menu */
+    padding: 15px 0; /* Espaçamento interno do menu */
+    transition: max-height 0.3s ease; /* Transição suave */
+    max-height: 0; /* Inicialmente oculto */
+    overflow: hidden; /* Esconde o conteúdo que ultrapassa */
+}
+
+.show-menu {
+    display: flex; /* Torna o menu visível quando a classe show-menu é aplicada */
+    max-height: 300px; /* Altura máxima ao abrir o menu */
+}
+
+.menu ul {
+    list-style: none; /* Remove os marcadores da lista */
+    padding: 0; /* Remove o padding */
+    margin: 0; /* Remove a margem */
+}
+
+.menu li {
+    margin: 10px 0; /* Espaçamento entre os itens do menu */
+}
+
+.menu a {
+    color: #fff; /* Cor dos links */
+    text-decoration: none; /* Remove o sublinhado */
+    padding: 10px 15px; /* Espaçamento interno dos links */
+    transition: background-color 0.3s; /* Efeito de transição ao passar o mouse */
+}
+
+.menu a:hover {
+    background-color: #106a97; /* Cor de fundo ao passar o mouse */
+}
+
+.nav-icon-container {
+    display: flex; /* Torna o contêiner flexível */
+    justify-content: space-between; /* Distribui os ícones com espaço igual */
+}
+
+
+.nav-icon-container img {
+    width: 50px; /* Largura dos ícones */
+    height: auto; /* Mantém a proporção */
+    margin-left: 20px; /* Aumenta o espaçamento entre os ícones */
+    cursor: pointer; /* Muda o cursor ao passar o mouse */
+}
+
+
+.menu-button {
+    cursor: pointer; /* Muda o cursor ao passar o mouse */
+    background: none; /* Remove fundo */
+    border: none; /* Remove borda */
+    margin: 10px; /* Adiciona margem ao redor do botão */
+    padding: 10px 20px; /* Adiciona espaço interno ao botão */
+}
+
+
+/* Exibição do menu */
+.menu.show-menu {
+    display: block; /* Exibe o menu quando a classe show-menu é adicionada */
+}
+
+/* Conteúdo do cabeçalho inferior */
+.header-bottom-side {
+    background: radial-gradient(circle, #106a97, #7dc7ec, #a8cfe2);
+    margin: 0;
+    display: flex;
+    justify-content: space-between; /* Espaço entre os elementos */
+    width: 100%; /* Largura total do contêiner */
+    padding: 20px 0; /* Espaçamento interno */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra para profundidade */
+}
+
+.header-bottom-side-left {
+    flex: 1; /* Ocupa 1 parte do espaço disponível */
+    padding-right: 20px; /* Espaçamen
+    to à direita */
+}
+
+.header-bottom-side-left button {
+    margin-top: 10px;
+    margin-left: 20px;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.header-bottom-side-left button:hover {
+    background-color: #01427a;
+}
+
+.header-bottom-side-right {
+    flex: 1; /* Ocupa 1 parte do espaço disponível */
+    display: flex;
+    justify-content: center; /* Centraliza a imagem horizontalmente */
+    align-items: center; /* Centraliza a imagem verticalmente */
+}
+
+.header-bottom-side-left h2 {
+    font-size: 58px; /* Tamanho da fonte do título */
+    margin: 0 0 10px; /* Margem inferior */
+    margin-left: 20px;
+    margin-top: 80px;
+}
+
+.header-bottom-side-left h2 span {
+    color: #007bff; /* Cor para a parte destacada do texto */
+}
+
+.header-bottom-side-left p {
+    font-size: 20px; /* Tamanho da fonte do parágrafo */
+    line-height: 1.5; /* Espaçamento entre linhas */
+    color: #ffffff; /* Cor do texto */
+    margin-left: 20px;
+    margin-top: 20px; /* Espaçamento superior */
+    margin-bottom: 10px; /* Espaçamento inferior */
+    transition: color 0.3s ease; /* Transição suave */
+}
+
+.header-bottom-side-right img {
+    max-width: 100%; /* Garante que a imagem não exceda o tamanho do contêiner */
+    height: auto; /* Mantém a proporção da imagem */
+    margin-top: 70px; /* Posiciona a imagem verticalmente */
+    margin-left: 20px; /* Espaçamento à esquerda */
+    cursor: pointer; /* Muda o cursor ao passar o mouse */
+    transition: transform 0.3s ease; /* Transição suave */
+    transform: scale(1); /* Inicialmente não escalada */
+    filter: drop-shadow(20px 0px 5px rgba(0, 0, 0, 0.5)); /* Inicialmente sombra sobre a imagem */
+}
+
+/* main*/
+main{
+    background-color: #fffafa; /* Cor de fundo */
+}
+.blue-background{
+    background-image: radial-gradient(#ffff,#014e96); /* Cor de fundo azul */
+    color: #ffffff; /* Cor do texto */
+    padding: 10px; /* Espaçamento interno */
+    margin-bottom: px; /* Espaçamento inferior */
+}
+.page-inner-container{
+    width: 100%;
+    margin: 0 auto;
+}
+.cols{
+    display: grid;
+    justify-content: space-between;
+    padding: 4rem 1rem;
+}
+.cols-3{
+    grid-template-columns:repeat(3,1fr);
+    margin-left: 70px;
+    filter: drop-shadow(4px 0 4px);
+    filter: saturate(-10%);
+    transition: filter 0.4s ease;
+}
+.page-inner-content img:hover {
+    filter: saturate(150%);
+    transform: scale(1.10);
+    z-index: 1;
+    overflow: hidden;
+    transition: all 0.4s ease-in-out;
+  }
+  .page-inner-content-1{
+    background-color:(#014e96,lightblue,white);
+
+  }
+  .page-inner-content {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.cols{
+    display: grid;
+    justify-content: space-between;
+    padding: 4rem 1rem;
+}
+
+.cols-3 {
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-content: center;
+}
+
+.cols-3 img {
+    width: 300px;
+    margin-left: 170px;
+    align-items: center;
+    justify-content: center;
+}
+
+.cols-4 {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-left: 150px;
+}
+
+.section-title{
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 5px;
+    color: #000000;
+    font-size: 2.8rem;
+}
+
+.subtitle-underline{
+    width: 170px;
+    height: 8px;
+    background-color:#007bff;
+    margin: 8px auto 0 auto;
+    /*border-radius: 9999px;*/
+}
+
+.product {
+    width: 300px;
+    margin-bottom: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.product img {
+    filter: drop-shadow(20px 0px 5px #707070);
+}
+
+.product-name {
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 10px;    
+}
+
+.rate {
+    font-size: 20px;
+    margin-top: 5px;
+    color: #ffee06;
+}
+
+.product-price {
+    font-size: 18px;
+    font-weight: 550;
+}
+
+.product-price span {
+    color: black;
+    font-weight: 640;
+}
+
+.cols>* {
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.cols>*:hover {
+    transform: scale(1.05);
+}
+
+@media only screen and (max-width: 768px) {
+    .cols-3 {
+        grid-template-columns: 1fr;
+    }
+}
+/* Estilo da seção destaque */
+.destaque {
+    background-color: #f9f9f9; /* Cor de fundo clara */
+    padding: 40px 20px; /* Espaçamento interno */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra para profundidade */
+    margin: 20px 0; /* Margem acima e abaixo */
+}
+
+.title-section {
+    text-align: center; /* Centraliza o título */
+    font-size: 2.5rem; /* Tamanho da fonte */
+    color: #000; /* Cor do texto */
+    margin-bottom: 10px; /* Espaçamento abaixo do título */
+}
+
+.underline-subtitle {
+    width: 150px; /* Largura da linha embaixo do título */
+    height: 4px; /* Altura da linha */
+    background-color: #007bff; /* Cor da linha */
+    margin: 0 auto 20px; /* Centraliza a linha e adiciona espaço abaixo */
+    border-radius: 5px; /* Arredonda as bordas da linha */
+}
+
+.cols.cols-8 {
+    display: grid; /* Usa grid para o layout */
+    grid-template-columns: repeat(4, 1fr); /* Quatro colunas */
+    gap: 20px; /* Espaço entre os produtos */
+}
+
+.product1 {
+    background: transparent; /* Remove o fundo branco */
+    border-radius: 10px; /* Arredonda os cantos */
+    padding: 20px; /* Espaçamento interno do produto */
+    text-align: center; /* Centraliza o texto */
+    transition: transform 0.3s; /* Efeito de transição ao passar o mouse */
+}
+
+
+.product1 img {
+    max-width: 100%; /* Garante que a imagem não ultrapasse o contêiner */
+    height: auto; /* Mantém a proporção da imagem */
+    margin-bottom: 10px; /* Espaçamento abaixo da imagem */
+    background: transparent; /* Remove o fundo branco */
+}
+
+.product-name {
+    font-size: 1.2rem; /* Tamanho da fonte do nome do produto */
+    margin: 10px 0; /* Espaçamento acima e abaixo */
+}
+
+.rate {
+    font-size: 1rem; /* Tamanho da fonte da classificação */
+    color: #f39c12; /* Cor da estrela */
+    margin: 5px 0; /* Espaçamento acima e abaixo */
+}
+
+.product-price {
+    font-size: 1.3rem; /* Tamanho da fonte do preço */
+    color: #000000; /* Cor do preço */
+}
+
+/* Reverse*/
+#reverse .header-bottom-side {
+    display: flex;
+    flex-direction: row-reverse; /* Inverte a ordem dos filhos */
+    align-items: center; /* Alinha verticalmente no centro */
+}
+
+.header-bottom-side-left {
+    margin-left: 20px; /* Espaço entre a imagem e o texto */
+}
+
+.header-bottom-side-right {
+    flex: 1; /* Permite que a imagem ocupe o espaço restante */
+}
+
+
+/* Efeito ao passar o mouse sobre o produto */
+.product1:hover {
+    transform: scale(1.05); /* Aumenta um pouco o tamanho */
+}
+/* Estilos para a seção de comentários */
+.comentarios {
+    border-radius: 8px; /* Cantos arredondados para um visual mais suave */
+    overflow: hidden; /* Oculta o conteúdo que ultrapassa os limites do contêiner */
+}
+
+/* Estilos gerais da página */
+.page-inner-content {
+    padding: 20px; /* Espaçamento interno para separar o conteúdo das bordas */
+}
+
+/* Estilos para o carrossel */
+.carrossel {
+    position: relative; /* Permite posicionar elementos filhos (como botões) em relação a este contêiner */
+    overflow: hidden; /* Oculta conteúdo que ultrapassa os limites do carrossel */
+}
+
+.carrossel-inner {
+    background-color: transparent;
+    display: flex; /* Usa flexbox para alinhar os itens horizontalmente */
+    transition: transform 0.3s ease; /* Suaviza a transição ao mover os slides */
+    gap: 50px;
+}
+
+.carrossel-text {
+    margin: 20px; /* Adiciona uma margem ao redor de cada comentário */
+    padding: 15px; /* Adiciona preenchimento interno */
+    min-width:300px;
+    border-radius: 5px; /* Opcional: Arredonda os cantos da borda */
+    background-color: #7dc7ec; /* Opcional: Define uma cor de fundo suave */
+    text-align: center;
+    transition: transform 0.1s ease; /* Suaviza a transição ao passar o mouse sobre o texto */
+    color: white;
+    cursor: pointer;
+}
+.carrossel-text:hover{
+    transform: scale(1.05); /* Aumenta um pouco o tamanho */
+
+}
+
+/* Estilo para as aspas */
+.carrossel-text p:first-child {
+    font-size: 2em; /* Tamanho maior para a primeira frase (aspas) */
+    color: gray; /* Cor do texto em cinza */
+}
+
+/* Estilos para o texto e a classificação */
+.carrossel-text p {
+    margin: 15px 0; /* Espaçamento vertical entre os parágrafos */
+    font-size: 18px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.rate {
+    font-size: 1.5em; /* Tamanho da fonte para a classificação */
+    color: gold; /* Cor dourada para destacar a classificação */
+}
+
+/* Estilos dos botões de navegação */
+button {
+    position: absolute; /* Permite posicionar o botão em relação ao carrossel */
+    top: 50%; /* Centraliza verticalmente */
+    transform: translateY(-50%); /* Ajusta a posição do botão para o centro exato */
+    background-color: rgb(0, 174, 255); /* Cor de fundo com leve transparência */
+    border: none; /* Remove a borda padrão do botão */
+    cursor: pointer; /* Muda o cursor ao passar o mouse sobre o botão */
+    padding: 10px; /* Espaçamento interno do botão */
+    border-radius: 5px; /* Cantos arredondados para o botão */
+    transition: background-color 0.3s; /* Transição suave ao alterar a cor de fundo */
+    z-index: 10; /* Garante que os botões apareçam acima do conteúdo do carrossel */
+
+}
+
+button:hover,
+button:focus {
+    background-color: rgba(0, 217, 255, 0.753); /* Altera a cor de fundo ao passar o mouse ou focar */
+}
+
+.prev {
+    left: 5px; /* Posiciona o botão "anterior" à esquerda */
+}
+
+.next {
+    right: 10px; /* Posiciona o botão "próximo" à direita */
+}
+
+.footer {
+    background-color: #7dc7ec; /* Cor de fundo do footer */
+    color: white; /* Cor do texto */
+    padding: 10px; /* Espaçamento interno */
+    text-align: center; /* Alinhamento central */
+}
+
+.footer-content {
+    max-width: 800px; /* Largura máxima do conteúdo */
+    margin: auto; /* Centraliza o footer */
+}
+
+.footer h2 {
+    margin-bottom: 10px; /* Espaçamento abaixo do título */
+}
+
+.footer p {
+    margin: 5px 0; /* Espaçamento em cima e embaixo do parágrafo */
+    list-style-type: none;
+}
+
+.social-links1 {
+    margin: 5px 0; /* Espaçamento acima e abaixo dos links sociais */
+}
+
+.social-links1 a {
+    color: white; /* Cor dos links */
+    margin: 0 10px; /* Espaçamento entre os links */
+    text-decoration: none; /* Remove o sublinhado */
+}
+
+.social-links1 a:hover {
+    text-decoration: underline; /* Sublinha ao passar o mouse */
+}
+
+.contact-info {
+    margin-top: 15px; /* Espaçamento acima das informações de contato */
+}
